@@ -1,0 +1,9 @@
+<%= simple_form_for(@book, html: {class: "form-horizontal well"}) do |f| %>
+  <%= f.input :name %>
+  <%= f.association :category, label: '分类'%>
+  <%= f.input :isbn, label: 'isbn' %>
+  <%= f.input :author %>
+  <%= f.input :price %>
+  <%= f.input :status, collection: [['未被借出',0] ,['已被借出',1],] ,as: :radio_buttons, :wrapper => 'horizontal_radio_and_checkboxes'%>
+	<%= f.button :submit, '保存', class: 'col-md-offset-2' %>
+<%end%>
