@@ -1,9 +1,12 @@
-<%= simple_form_for(@book, html: {class: "form-horizontal well"}) do |f| %>
+<%= simple_form_for(@book, html: {class: "form-horizontal well"}, wrapper_mappings: {
+    radio_buttons: :horizontal_radio_and_checkboxes
+  }) do |f| %>
   <%= f.input :name %>
-  <%= f.association :category, label: '分类'%>
+  <%= f.association :category, collection: Category.where.not(parent_id: nil) ,label: '分类'%>
   <%= f.input :isbn, label: 'isbn' %>
   <%= f.input :author %>
-  <%= f.input :price %>
-  <%= f.input :status, collection: [['未被借出',0] ,['已被借出',1],] ,as: :radio_buttons, :wrapper => 'horizontal_radio_and_checkboxes'%>
+  <%= f.input :price, :input_html => { :type => 'text' } %>
+  <%= f.input :status, collection: @book.humanized_stauts.map{|t| [t.humanized, t.value]} ,as: :radio_buttons%>
+  <hr>
 	<%= f.button :submit, '保存', class: 'col-md-offset-2' %>
 <%end%>

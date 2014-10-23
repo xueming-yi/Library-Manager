@@ -1,0 +1,12 @@
+zh-CN:
+  activerecord:
+    models:
+      book: "图书"
+      user: "用户"
+      category: "分类"
+    attributes:
+      book:
+        name: '书名'
+        price: '价格'
+        author: '作者'
+        status: '状态'

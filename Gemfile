@@ -46,6 +46,7 @@ gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form'
 
 gem 'devise'
 
+gem 'assignable_values'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -56,5 +57,5 @@ gem 'devise'
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'debugger', group: [:development, :test]
 

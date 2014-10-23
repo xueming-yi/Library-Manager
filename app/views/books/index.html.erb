@@ -1,13 +1,20 @@
-<table class='table table-spring'>
+<ol class="breadcrumb">
+  <li>图书列表</li>
+  <span class="pull-right"><%= link_to t("buttons.add"), new_book_path %></span>
+</ol>
+<table class='table table-bordered table-condensed table-hover'>
   <thead>
-    <th>序号</th>
-    <th>书名</th>
-    <th>作者</th>
-    <th>isbn</th>
-    <th>入库时间</th>
-    <th>分类</th>
-    <th>价格</th>
-    <th>状态</th>
+    <tr>
+      <th>序号</th>
+      <th><%= Book.human_attribute_name(:name) %></th>
+      <th><%= Book.human_attribute_name(:author) %></th>
+      <th>isbn</th>
+      <th>入库时间</th>
+      <th><%= Category.model_name.human %></th>
+      <th><%= Book.human_attribute_name(:price) %></th>
+      <th><%= Book.human_attribute_name(:status) %></th>
+      <th></th>
+    </tr>
   </thead>
   <tbody>
     <% if @books.present?%>
@@ -21,6 +28,7 @@
         <td><%= book.category.name%></td>
         <td><%= book.price%></td>
         <td><%= book.status%></td>
+        <td><%= link_to t("buttons.edit"), edit_book_path(book)%></td>
       </tr>
       <%end%>
     <%else%>
