@@ -180,7 +180,7 @@ Structure(201 OK)
       "custom_properties": {
         "type": "string"
       },
-      deprecated_image_url": {
+      "deprecated_image_url": {
         "type": "string"
       },
       "website_url": {
