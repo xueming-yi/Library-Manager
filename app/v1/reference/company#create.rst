@@ -65,39 +65,43 @@ Body Structure
     "properties": {
       "name":{
         "type": "string",
-        "maximum": 255,
+        "max_length": 255,
       }, 
       "address_line_1":{
         "type": "string",
-        "maximum": 255,
+        "max_length": 255,
       },
       "address_line_2":{
         "type": "string",
-        "maximum": 255,
+        "max_length": 255,
       },
       "city":{
         "type": "string",
-        "maximum": 255,
+        "max_length": 255,
       },
       "postal_code":{
         "type": "string",
+        "max_length": 255,
       },
       "state_or_province":{
         "type": "string",
+        "max_length": 255,
       },
       "country":{
         "type": "string",
+        "max_length": 255,
       },
       "phone":{
         "type": "string",
-      },
+        "max_length": 255,
       },
       "deprecated_image_url":{
         "type": "string",
-      },
+        "max_length": 255,
       },
       "website_url":{
         "type": "string",
+        "max_length": 255,
       },
     },
   }
@@ -139,55 +143,72 @@ Structure(201 OK)
         "type": "string"
       },
       "name": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "trade": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "category": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "status": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "project_size": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "user_size": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "address_line_1": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "address_line_2": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "city": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "postal_code": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "state_or_province": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "country": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "phone": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "custom_properties": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "deprecated_image_url": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "website_url": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "description": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "created_at": {
         "type": "datetime"
@@ -196,28 +217,33 @@ Structure(201 OK)
         "type": "datetime"
       },
       "image_file_name": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "image_content_type": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "image_file_size": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "image_updated_at": {
         "type": "datatime"
       },
       "processing_image_key": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "original_name": {
-        "type": "string"
+        "type": "string",
+        "max_length": 255,
       },
       "erp_id": {
-        "type": "string"
+        "type": "text",
       },
       "tax_id": {
-        "type": "string"
+        "type": "text",
       },
     },
   }
