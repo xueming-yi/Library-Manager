@@ -214,10 +214,10 @@ Structure(201 OK)
         "type": "string"
       },
       "erp_id": {
-        "type": "number"
+        "type": "string"
       },
       "tax_id": {
-        "type": "number"
+        "type": "string"
       },
     },
   }
@@ -263,33 +263,33 @@ Response
   Content-Type: application/json; charset=utf-8
 
   {
-            "id": "d966a8ef-e7d9-4706-aec7-e1324b3b54bc",
-            "account_id": "91098a80-a5e6-4855-8ea6-edc1ae1bd3a5",
-            "name": "company aixl 001",
-            "trade": null,
-            "category": null,
-            "status": null,
-            "project_size": null,
-            "user_size": null,
-            "address_line_1": "The Fifth Avenue",
-            "address_line_2": "#301",
-            "city": "New York",
-            "postal_code": "10011",
-            "state_or_province": "NY",
-            "country": "US",
-            "phone": "21212345678",
-            "custom_properties": null,
-            "deprecated_image_url": "http://www.aixl.com/logo.jpg",
-            "website_url": "http://www.aixl.com",
-            "description": null,
-            "created_at": "2016-04-08T08:03:35.312Z",
-            "updated_at": "2016-04-08T08:03:35.312Z",
-            "image_file_name": null,
-            "image_content_type": null,
-            "image_file_size": null,
-            "image_updated_at": null,
-            "processing_image_key": null,
-            "original_name": null,
-            "erp_id": null,
-            "tax_id": null
-   }
+    "id": "d966a8ef-e7d9-4706-aec7-e1324b3b54bc",
+    "account_id": "91098a80-a5e6-4855-8ea6-edc1ae1bd3a5",
+    "name": "company aixl 001",
+    "trade": null,
+    "category": null,
+    "status": null,
+    "project_size": null,
+    "user_size": null,
+    "address_line_1": "The Fifth Avenue",
+    "address_line_2": "#301",
+    "city": "New York",
+    "postal_code": "10011",
+    "state_or_province": "NY",
+    "country": "US",
+    "phone": "21212345678",
+    "custom_properties": null,
+    "deprecated_image_url": "http://www.aixl.com/logo.jpg",
+    "website_url": "http://www.aixl.com",
+    "description": null,
+    "created_at": "2016-04-08T08:03:35.312Z",
+    "updated_at": "2016-04-08T08:03:35.312Z",
+    "image_file_name": null,
+    "image_content_type": null,
+    "image_file_size": null,
+    "image_updated_at": null,
+    "processing_image_key": null,
+    "original_name": null,
+    "erp_id": null,
+    "tax_id": null
+  }
