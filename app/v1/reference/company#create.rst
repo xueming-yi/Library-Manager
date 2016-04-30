@@ -59,48 +59,48 @@ Body Structure
 .. code-block:: json
 
   {
-            "$schema": "http://json-schema.org/draft-04/schema#",
-            "title": "company",
-            "type": "object",
-            "properties": {
-              "name":{
-                "type": "string",
-                "maximum": 255,
-              }, 
-              "address_line_1":{
-                "type": "string",
-                "maximum": 255,
-              },
-              "address_line_2":{
-                "type": "string",
-                "maximum": 255,
-              },
-              "city":{
-                "type": "string",
-                "maximum": 255,
-              },
-              "postal_code":{
-                "type": "string",
-              },
-              "state_or_province":{
-                "type": "string",
-              },
-              "country":{
-                "type": "string",
-              },
-              "phone":{
-                "type": "string",
-              },
-              },
-              "deprecated_image_url":{
-                "type": "string",
-              },
-              },
-              "website_url":{
-                "type": "string",
-              },
-            },
-    }
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "company",
+    "type": "object",
+    "properties": {
+      "name":{
+        "type": "string",
+        "maximum": 255,
+      }, 
+      "address_line_1":{
+        "type": "string",
+        "maximum": 255,
+      },
+      "address_line_2":{
+        "type": "string",
+        "maximum": 255,
+      },
+      "city":{
+        "type": "string",
+        "maximum": 255,
+      },
+      "postal_code":{
+        "type": "string",
+      },
+      "state_or_province":{
+        "type": "string",
+      },
+      "country":{
+        "type": "string",
+      },
+      "phone":{
+        "type": "string",
+      },
+      },
+      "deprecated_image_url":{
+        "type": "string",
+      },
+      },
+      "website_url":{
+        "type": "string",
+      },
+    },
+  }
 
 ********
 Response
@@ -120,107 +120,107 @@ Status Code                 Description
 500 Internal Server Error            To indicate server side problems
 ==========================  ====================================
 
-Structure(200 OK)
+Structure(201 OK)
 ====================
 
 .. code-block:: json
 
-      {
-            "$schema": "http://json-schema.org/draft-04/schema#",
-            "title": "Company",
-            "type": "object",
-            "properties": {
-              "id":{
-                "description": "The unique identifier for a product",
-                "type": "string"
-               },
-               "account_id":{
-                 "description": "The unique identifier for a product",
-                 "type": "string"
-               },
-               "name": {
-                 "type": "string"
-               },
-               "trade": {
-                 "type": "string"
-               },
-               "category": {
-                 "type": "string"
-               },
-               "status": {
-                 "type": "string"
-               },
-               "project_size": {
-                 "type": "string"
-               },
-               "user_size": {
-                 "type": "string"
-               },
-               "address_line_1": {
-                 "type": "string"
-               },
-               "address_line_2": {
-                 "type": "string"
-               },
-               "city": {
-                 "type": "string"
-               },
-               "postal_code": {
-                 "type": "string"
-               },
-               "state_or_province": {
-                 "type": "string"
-               },
-               "country": {
-                 "type": "string"
-               },
-               "phone": {
-                 "type": "string"
-               },
-               "custom_properties": {
-                 "type": "string"
-               },
-               "deprecated_image_url": {
-                 "type": "string"
-               },
-               "website_url": {
-                 "type": "string"
-               },
-               "description": {
-                 "type": "string"
-               },
-               "created_at": {
-                 "type": "datetime"
-               },
-               "updated_at": {
-                 "type": "datetime"
-               },
-               "image_file_name": {
-                 "type": "string"
-               },
-               "image_content_type": {
-                 "type": "string"
-               },
-               "image_file_size": {
-                 "type": "string"
-               },
-               "image_updated_at": {
-                 "type": "datatime"
-               },
-               "processing_image_key": {
-                 "type": "string"
-               },
-               "original_name": {
-                 "type": "string"
-               },
-               "erp_id": {
-                 "type": "number"
-               },
-               "tax_id": {
-                 "type": "number"
-               },
-            },
-      }
+  {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Company",
+    "type": "object",
+    "properties": {
+      "id":{
+        "description": "The unique identifier for a product",
+        "type": "string"
+      },
+      "account_id":{
+        "description": "The unique identifier for a product",
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "trade": {
+        "type": "string"
+      },
+      "category": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "project_size": {
+        "type": "string"
+      },
+      "user_size": {
+        "type": "string"
+      },
+      "address_line_1": {
+        "type": "string"
+      },
+      "address_line_2": {
+        "type": "string"
+      },
+      "city": {
+        "type": "string"
+      },
+      "postal_code": {
+        "type": "string"
+      },
+      "state_or_province": {
+        "type": "string"
+      },
+      "country": {
+        "type": "string"
+      },
+      "phone": {
+        "type": "string"
+      },
+      "custom_properties": {
+        "type": "string"
+      },
+      deprecated_image_url": {
+        "type": "string"
+      },
+      "website_url": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "created_at": {
+        "type": "datetime"
+      },
+      "updated_at": {
+        "type": "datetime"
+      },
+      "image_file_name": {
+        "type": "string"
+      },
+      "image_content_type": {
+        "type": "string"
+      },
+      "image_file_size": {
+        "type": "string"
+      },
+      "image_updated_at": {
+        "type": "datatime"
+      },
+      "processing_image_key": {
+        "type": "string"
+      },
+      "original_name": {
+        "type": "string"
+      },
+      "erp_id": {
+        "type": "number"
+      },
+      "tax_id": {
+        "type": "number"
+      },
+    },
+  }
 
 ********
 Examples
