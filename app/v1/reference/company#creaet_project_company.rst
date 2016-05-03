@@ -64,60 +64,60 @@ Body Structure
 
 .. code-block:: json
     
-    {
-        "title": "company",
-        "type": "object",
-        "properties": {
-            "account_id": {
-                "type": "string",
-            },
-            "project_id": {
-                "type": "string",
-            },
-            "service_type": {
-                "type": "string",
-            },
-            "name": {
-                "type": "string",
-            },
-            "trade": {
-                "type": "string",
-            },
-            "category": {
-                "type": "string",
-            },
-            "website_url": {
-                "type": "string",
-            },
-            "city": {
-                "type": "string",
-            },
-            "country": {
-                "type": "string",
-            },
-            "address_line_1": {
-                "type": "string",
-            },
-            "address_line_2": {
-                "type": "string",
-            },
-            "postal_code": {
-                "type": "string",
-            },
-            "erp_id": {
-                "type": "string",
-            },
-            "tax_id": {
-                "type": "string",
-            },
-            "phone": {
-                "type": "string",
-            },
-            "description": {
-                "type": "string",
-            },
-        }
+  {
+    "title": "company",
+    "type": "object",
+    "properties": {
+      "account_id": {
+        "type": "string",
+      },
+      "project_id": {
+        "type": "string",
+      },
+      "service_type": {
+        "type": "string",
+      },
+      "name": {
+        "type": "string",
+      },
+      "trade": {
+        "type": "string",
+      },
+      "category": {
+        "type": "string",
+      },
+      "website_url": {
+        "type": "string",
+      },
+      "city": {
+        "type": "string",
+      },
+      "country": {
+        "type": "string",
+      },
+      "address_line_1": {
+        "type": "string",
+      },
+      "address_line_2": {
+        "type": "string",
+      },
+      "postal_code": {
+        "type": "string",
+      },
+      "erp_id": {
+        "type": "string",
+      },
+      "tax_id": {
+        "type": "string",
+      },
+      "phone": {
+        "type": "string",
+      },
+      "description": {
+        "type": "string",
+      },
     }
+  }
 
 ********
 Response
@@ -142,101 +142,101 @@ Structure(200 OK)
 
 .. code-block:: json
 
-    {
-        "title": "Company",
-        "type": "object",
-        "properties": {
-          "id":{
-            "description": "The unique identifier for a product",
-            "type": "string"
-           },
-           "account_id":{
-             "description": "The unique identifier for a product",
-             "type": "string"
-           },
-           "name": {
-             "type": "string"
-           },
-           "trade": {
-             "type": "string"
-           },
-           "category": {
-             "type": "string"
-           },
-           "status": {
-             "type": "string"
-           },
-           "project_size": {
-             "type": "string"
-           },
-           "user_size": {
-             "type": "string"
-           },
-           "address_line_1": {
-             "type": "string"
-           },
-           "address_line_2": {
-             "type": "string"
-           },
-           "city": {
-             "type": "string"
-           },
-           "postal_code": {
-             "type": "string"
-           },
-           "state_or_province": {
-             "type": "string"
-           },
-           "country": {
-             "type": "string"
-           },
-           "phone": {
-             "type": "string"
-           },
-           "custom_properties": {
-             "type": "string"
-           },
-           "deprecated_image_url": {
-             "type": "string"
-           },
-           "website_url": {
-             "type": "string"
-           },
-           "description": {
-             "type": "string"
-           },
-           "created_at": {
-             "type": "datetime"
-           },
-           "updated_at": {
-             "type": "datetime"
-           },
-           "image_file_name": {
-             "type": "string"
-           },
-           "image_content_type": {
-             "type": "string"
-           },
-           "image_file_size": {
-             "type": "string"
-           },
-           "image_updated_at": {
-             "type": "datatime"
-           },
-           "processing_image_key": {
-             "type": "string"
-           },
-           "original_name": {
-             "type": "string"
-           },
-           "erp_id": {
-             "type": "number"
-           },
-           "tax_id": {
-             "type": "number"
-           },
-        },
-    }
+  {
+    "title": "Company",
+    "type": "object",
+    "properties": {
+      "id":{
+        "description": "The unique identifier for a product",
+        "type": "string"
+       },
+       "account_id":{
+          "description": "The unique identifier for a product",
+          "type": "string"
+       },
+       "name": {
+          "type": "string"
+       },
+       "trade": {
+          "type": "string"
+       },
+       "category": {
+          "type": "string"
+       },
+       "status": {
+          "type": "string"
+       },
+       "project_size": {
+          "type": "string"
+       },
+       "user_size": {
+          "type": "string"
+       },
+       "address_line_1": {
+         "type": "string"
+       },
+       "address_line_2": {
+          "type": "string"
+       },
+       "city": {
+          "type": "string"
+       },
+       "postal_code": {
+          "type": "string"
+       },
+       "state_or_province": {
+          "type": "string"
+       },
+       "country": {
+          "type": "string"
+       },
+       "phone": {
+          "type": "string"
+       },
+       "custom_properties": {
+          "type": "string"
+       },
+       "deprecated_image_url": {
+          "type": "string"
+       },
+       "website_url": {
+          "type": "string"
+       },
+       "description": {
+          "type": "string"
+       },
+       "created_at": {
+          "type": "datetime"
+       },
+       "updated_at": {
+          "type": "datetime"
+       },
+       "image_file_name": {
+          "type": "string"
+       },
+       "image_content_type": {
+          "type": "string"
+       },
+       "image_file_size": {
+          "type": "string"
+       },
+       "image_updated_at": {
+          "type": "datatime"
+       },
+       "processing_image_key": {
+          "type": "string"
+       },
+       "original_name": {
+          "type": "string"
+       },
+       "erp_id": {
+          "type": "number"
+       },
+       "tax_id": {
+          "type": "number"
+       },
+    },
+  }
 
 Request:
 
@@ -285,6 +285,7 @@ Response
   HTTP/1.1 201 Created
   Cache-Control: max-age=0, private, must-revalidate
   Content-Type: application/json; charset=utf-8
+  
   {
     "id": "f48fcbe8-822d-4ae1-91cb-fb132c5db014",
     "account_id": "4d35ca2e-ccff-4397-8c34-2a9d7dbe1e74",
@@ -316,11 +317,3 @@ Response
     "erp_id": "123",
     "tax_id": "123"
   }
-
-
-
-
-
-
-
-
