@@ -59,7 +59,6 @@ Body Structure
 .. code-block:: json
 
   {
-    "$schema": "http://json-schema.org/draft-04/schema#",
     "title": "company",
     "type": "object",
     "properties": {
@@ -130,7 +129,6 @@ Structure(201 OK)
 .. code-block:: json
 
   {
-    "$schema": "http://json-schema.org/draft-04/schema#",
     "title": "Company",
     "type": "object",
     "properties": {
@@ -144,71 +142,54 @@ Structure(201 OK)
       },
       "name": {
         "type": "string",
-        "max_length": 255,
       },
       "trade": {
         "type": "string",
-        "max_length": 255,
       },
       "category": {
         "type": "string",
-        "max_length": 255,
       },
       "status": {
         "type": "string",
-        "max_length": 255,
       },
       "project_size": {
         "type": "string",
-        "max_length": 255,
       },
       "user_size": {
         "type": "string",
-        "max_length": 255,
       },
       "address_line_1": {
         "type": "string",
-        "max_length": 255,
       },
       "address_line_2": {
         "type": "string",
-        "max_length": 255,
       },
       "city": {
         "type": "string",
-        "max_length": 255,
       },
       "postal_code": {
         "type": "string",
-        "max_length": 255,
       },
       "state_or_province": {
         "type": "string",
-        "max_length": 255,
       },
       "country": {
         "type": "string",
-        "max_length": 255,
       },
       "phone": {
         "type": "string",
-        "max_length": 255,
       },
       "custom_properties": {
         "type": "string",
-        "max_length": 255,
       },
       "deprecated_image_url": {
         "type": "string",
-        "max_length": 255,
       },
       "website_url": {
         "type": "string",
-        "max_length": 255,
       },
       "description": {
         "type": "string",
-        "max_length": 255,
       },
       "created_at": {
         "type": "datetime"
@@ -218,26 +199,21 @@ Structure(201 OK)
       },
       "image_file_name": {
         "type": "string",
-        "max_length": 255,
       },
       "image_content_type": {
         "type": "string",
-        "max_length": 255,
       },
       "image_file_size": {
         "type": "string",
-        "max_length": 255,
       },
       "image_updated_at": {
         "type": "datatime"
       },
       "processing_image_key": {
         "type": "string",
-        "max_length": 255,
       },
       "original_name": {
         "type": "string",
-        "max_length": 255,
       },
       "erp_id": {
         "type": "text",
