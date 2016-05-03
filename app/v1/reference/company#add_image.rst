@@ -47,9 +47,9 @@ Body Structure
     "title": "company",
     "type": "object",
     "properties": {
-       "account_id": {
-          "type": "string",
-       },
+      "account_id": {
+        "type": "string",
+      },
     },
   }
 
