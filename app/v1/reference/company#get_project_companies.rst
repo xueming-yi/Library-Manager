@@ -1,5 +1,5 @@
 ########################################
-GET Companies#get_project_companies
+GET get_project_companies
 ########################################
 
 Query the partner companies from the project
@@ -30,17 +30,6 @@ Authorization      string    Yes       OAuth 2 authorization header
 Content-Type       string    Yes       Must be "application/json"
 ================  =========  ========= ===========================================
 
-Input Parameters
-=================
-=====================  =========  ========= ===========================================
-Name                   Type       Required  Description
-=====================  =========  ========= ===========================================
-account_id             string     YES       HQ account id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49;.
-project_id             string     YES       HQ project id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49;.
-service_type           string     YES       single type allowed. field, glue or plan, etc..
-limit                  integer    NO        set response array's size. Default size: 10. Default sort order is updated_at DESC..
-offset                 integer    NO        set offset of response array. Default value: 0. Default sort order is updated_at DESC.. 
-
 Body Structure
 ================
 
@@ -49,24 +38,40 @@ Body Structure
     "title": "company",
     "type": "object",
     "properties": {
-        "account_id": {
-          "type": "string",
-        },
-        "project_id": {
-          "type": "string",
-        },
-        "service_type": {
-          "type": "string",
-        },
-        "limit": {
-          "type": "integer",
-        },
-        "offset": {
-          "type": "integer",
-        },
-      }
+      "account_id": {
+        "type": "uuid",
+        "description": "HQ account id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49",
+      },
+      "project_id": {
+        "type": "uuid",
+        "description": "HQ project id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49",
+      },
+      "service_type": {
+        "type": "string",
+        "description": "single type allowed. field, glue or plan, etc..",
+      },
+      "limit": {
+        "type": "integer",
+        "description": "set response array's size. Default size: 10. Default sort order is updated_at DESC..",
+      },
+      "offset": {
+        "type": "integer",
+        "description": "set offset of response array. Default value: 0. Default sort order is updated_at DESC..",
+      },
+    },
+    "required": ["account_id", "project_id"]  
   }
-  
+
+=====================  ===========  ========= ===========================================
+Attribute              Value Type   Required  Description
+=====================  ===========  ========= ===========================================
+account_id             uuid         YES       HQ account id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49;.
+project_id             uuid         YES       HQ project id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49;.
+service_type           string       NO        single type allowed. field, glue or plan, etc..
+limit                  integer      NO        set response array's size. Default size: 10. Default sort order is updated_at DESC..
+offset                 integer      NO        set offset of response array. Default value: 0. Default sort order is updated_at DESC.. 
+=====================  ===========  ========= ===========================================
+
 ********
 Response
 ********
@@ -94,100 +99,68 @@ Structure(200 OK)
   
   [
     {
-      "id":{
-         "description": "The unique identifier for a product",
-         "type": "string"
-      },
-      "account_id":{
-         "description": "The unique identifier for a product",
-         "type": "string"
-      },
-      "name": {
-         "type": "string"
-      },
-      "trade": {
-         "type": "string"
-      },
-      "category": {
-         "type": "string"
-      },
-      "status": {
-         "type": "string"
-      },
-      "project_size": {
-         "type": "string"
-      },
-      "user_size": {
-         "type": "string"
-      },
-      "address_line_1": {
-         "type": "string"
-      },
-      "address_line_2": {
-         "type": "string"
-      },
-      "city": {
-         "type": "string"
-      },
-      "postal_code": {
-         "type": "string"
-      },
-      "state_or_province": {
-         "type": "string"
-      },
-      "country": {
-         "type": "string"
-      },
-      "phone": {
-         "type": "string"
-      },
-      "custom_properties": {
-         "type": "string"
-      },
-      "deprecated_image_url": {
-         "type": "string"
-      },
-      "website_url": {
-         "type": "string"
-      },
-      "description": {
-         "type": "string"
-      },
-      "created_at": {
-         "type": "datetime"
-      },
-      "updated_at": {
-         "type": "datetime"
-      },
-      "image_file_name": {
-         "type": "string"
-      },
-      "image_content_type": {
-         "type": "string"
-      },
-      "image_file_size": {
-         "type": "string"
-      },
-      "image_updated_at": {
-         "type": "datatime"
-      },
-      "processing_image_key": {
-         "type": "string"
-      },
-      "original_name": {
-         "type": "string"
-      },
-      "erp_id": {
-         "type": "string"
-      },
-      "tax_id": {
-         "type": "string"
-      },
-      "oxygen_group_id": {
-         "type": "string"
-      },
-    }
-    ...
+      "id": "d966a8ef-e7d9-4706-aec7-e1324b3b54bc",
+      "account_id": "91098a80-a5e6-4855-8ea6-edc1ae1bd3a5",
+      "name": "company aixl 001",
+      "trade": null,
+      "category": null,
+      "status": null,
+      "project_size": null,
+      "user_size": null,
+      "address_line_1": "The Fifth Avenue",
+      "address_line_2": "#301",
+      "city": "New York",
+      "postal_code": "10011",
+      "state_or_province": "NY",
+      "country": "US",
+      "phone": "21212345678",
+      "custom_properties": null,
+      "deprecated_image_url": "http://www.aixl.com/logo.jpg",
+      "website_url": "http://www.aixl.com",
+      "description": null,
+      "created_at": "2016-04-08T08:03:35.312Z",
+      "updated_at": "2016-04-08T08:03:35.312Z",
+      "image_file_name": null,
+      "image_content_type": null,
+      "image_file_size": null,
+      "image_updated_at": null,
+      "processing_image_key": null,
+      "original_name": null,
+      "erp_id": null,
+      "tax_id": null
+    },
+    {
+      "id": "1fcedb96-0a5c-4343-acc0-1aa3125bc2d1",
+      "account_id": "b18a6658-5a29-458d-b344-266298080a34",
+      "name": "S1459646542897_Trial",
+      "trade": null,
+      "category": "owner",
+      "status": null,
+      "project_size": 0,
+      "user_size": 0,
+      "address_line_1": null,
+      "address_line_2": null,
+      "city": null,
+      "postal_code": null,
+      "state_or_province": null,
+      "country": "US",
+      "phone": null,
+      "custom_properties": null,
+      "deprecated_image_url": null,
+      "website_url": null,
+      "description": null,
+      "created_at": "2016-04-03T01:15:36.514Z",
+      "updated_at": "2016-05-04T01:58:03.998Z",
+      "image_file_name": null,
+      "image_content_type": null,
+      "image_file_size": null,
+      "image_updated_at": null,
+      "processing_image_key": null,
+      "original_name": null,
+      "erp_id": null,
+      "tax_id": null
+    },
+    ....
   ]
   
 Request:
@@ -204,19 +177,7 @@ https://developer-dev.api.autodesk.com:443/ea-api/v1/accounts/4d35ca2e-ccff-4397
 Request
 =========
 
-.. code-block:: json
-  
-  GET /ea-api/v1/accounts/4d35ca2e-ccff-4397-8c34-2a9d7dbe1e74/projects/5ad6573d-ff9e-4329-ae3e-b921413112e7/companies?service_type=doc_manager HTTP/1.1
-  Content-Type: application/json
-  Authorization: Bearer KmE9JOw2PrRpqEhFsrFWbyktnnQA
-  
-  {
-    "account_id": "4d35ca2e-ccff-4397-8c34-2a9d7dbe1e74",
-    "project_id": "5ad6573d-ff9e-4329-ae3e-b921413112e7",
-    "service_type": "doc_manager",
-    "limit": 0,
-    "offset": 0
-  }
+curl -H "Authorization: Bearer KmE9JOw2PrRpqEhFsrFWbyktnnQA" https://developer-dev.api.autodesk.com:443/ea-api/v1/accounts/4d35ca2e-ccff-4397-8c34-2a9d7dbe1e74/projects/5ad6573d-ff9e-4329-ae3e-b921413112e7/companies?limit=1&service_type=doc_manager
   
 Response 
 ==========
@@ -259,6 +220,6 @@ Response
       "erp_id":null,
       "tax_id":null,
       "oxygen_group_id":"957876"
-    }
+    },
     ......
   ]
