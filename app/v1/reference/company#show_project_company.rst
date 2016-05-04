@@ -1,5 +1,5 @@
 ######################################
-GET Companies#show_project_company
+GET show_project_company
 ######################################
 
 Query the partner company from the project
@@ -30,41 +30,45 @@ Authorization      string    Yes       OAuth 2 authorization header
 Content-Type       string    Yes       Must be "application/json"
 ================  =========  ========= ===========================================
 
-Input Parameters
-=================
-=====================  =========  ========= ===========================================
-Name                   Type       Required  Description
-=====================  =========  ========= ===========================================
-account_id             string     Yes       HQ account id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49;. 
-project_id             string     Yes       HQ project id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49;.
-company_id             string     Yes       HQ company id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49;.
-service_type           string     No        single type allowed. field, glue or plan, etc.. 
-=====================  =========  ========= ===========================================
-
 Body Structure
 ================
 
 .. code-block:: json
 
   {
+    "$schema": "http://json-schema.org/draft-04/schema#",
     "title": "company",
     "type": "object",
     "properties": {
       "account_id":{
-        "type": "string",
+        "type": "uuid",
+        "description": "HQ account id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49;",
       }, 
       "project_id":{
-        "type": "string",
+        "type": "uuid",
+        "description": "HQ project id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49",
       },
       "company_id":{
-        "type": "string",
+        "type": "uuid",
+        "description": "HQ company id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49",
       },
       "service_type":{
         "type": "string",
+        "description": "single type allowed. field, glue or plan, etc.. ",
       },
-    }
+    },
+    "required": ["account_id", "project_id", "company_id"]
   }
-  
+
+=====================  ===========  ========= ===========================================
+Attribute              Value Type   Required  Description
+=====================  ===========  ========= ===========================================
+account_id             uuid         Yes       HQ account id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49;. 
+project_id             uuid         Yes       HQ project id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49;.
+company_id             uuid         Yes       HQ company id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49;.
+service_type           string       No        single type allowed. field, glue or plan, etc.. 
+=====================  ===========  ========= ===========================================
+
 ********
 Response
 ********
@@ -90,99 +94,35 @@ Structure(200 OK)
 .. code-block:: json
 
   {
-    "title": "Company",
-    "type": "object",
-    "properties": {
-      "id":{
-        "description": "The unique identifier for a product",
-        "type": "string"
-       },
-      "account_id":{
-          "description": "The unique identifier for a product",
-          "type": "string"
-       },
-      "name": {
-        "type": "string"
-      },
-      "trade": {
-        "type": "string"
-      },
-      "category": {
-        "type": "string"
-      },
-      "status": {
-        "type": "string"
-      },
-      "project_size": {
-        "type": "string"
-      },
-      "user_size": {
-        "type": "string"
-      },
-      "address_line_1": {
-        "type": "string"
-      },
-      "address_line_2": {
-        "type": "string"
-      },
-      "city": {
-        "type": "string"
-      },
-      "postal_code": {
-        "type": "string"
-      },
-      "state_or_province": {
-        "type": "string"
-      },
-      "country": {
-        "type": "string"
-      },
-      "phone": {
-        "type": "string"
-      },
-      "custom_properties": {
-        "type": "string"
-      },
-      "deprecated_image_url": {
-        "type": "string"
-      },
-      "website_url": {
-        "type": "string"
-      },
-      "description": {
-        "type": "string"
-      },
-      "created_at": {
-        "type": "datetime"
-      },
-      "updated_at": {
-        "type": "datetime"
-      },
-      "image_file_name": {
-        "type": "string"
-      },
-      "image_content_type": {
-        "type": "string"
-      },
-      "image_file_size": {
-        "type": "string"
-      },
-      "image_updated_at": {
-        "type": "datatime"
-      },
-      "processing_image_key": {
-        "type": "string"
-      },
-      "original_name": {
-        "type": "string"
-      },
-      "erp_id": {
-        "type": "string"
-      },
-      "tax_id": {
-        "type": "string"
-      },
-    }, 
+    "id": "d966a8ef-e7d9-4706-aec7-e1324b3b54bc",
+    "account_id": "91098a80-a5e6-4855-8ea6-edc1ae1bd3a5",
+    "name": "company aixl 001",
+    "trade": null,
+    "category": null,
+    "status": null,
+    "project_size": null,
+    "user_size": null,
+    "address_line_1": "The Fifth Avenue",
+    "address_line_2": "#301",
+    "city": "New York",
+    "postal_code": "10011",
+    "state_or_province": "NY",
+    "country": "US",
+    "phone": "21212345678",
+    "custom_properties": null,
+    "deprecated_image_url": "http://www.aixl.com/logo.jpg",
+    "website_url": "http://www.aixl.com",
+    "description": null,
+    "created_at": "2016-04-08T08:03:35.312Z",
+    "updated_at": "2016-04-08T08:03:35.312Z",
+    "image_file_name": null,
+    "image_content_type": null,
+    "image_file_size": null,
+    "image_updated_at": null,
+    "processing_image_key": null,
+    "original_name": null,
+    "erp_id": "456",
+    "tax_id": "123"
   }
 
 ********
@@ -192,24 +132,12 @@ Examples
 URL 
 =====
 
-https://developer-dev.api.autodesk.com:443/ea-api/v1/accounts/4d35ca2e-ccff-4397-8c34-2a9d7dbe1e74/projects/5ad6573d-ff9e-4329-ae3e-b921413112e7/companies/4c7d27f3-517a-46d2-93b1-fe19f2f63fd9?service_type=doc_manager
+https://developer-dev.api.autodesk.com:443/ea-api/v1/accounts/{account_id}/projects/{project_id}/companies/{company_id}?service_type=doc_manager
 
 Request
 ========= 
 
-.. code-block:: json
-
-  GET /ea-api/v1/accounts/4d35ca2e-ccff-4397-8c34-2a9d7dbe1e74/projects/5ad6573d-ff9e-4329-ae3e-b921413112e7/companies/4c7d27f3-517a-46d2-93b1-fe19f2f63fd9?service_type=doc_manager HTTP/1.1
-  Content-Type: application/json
-  Authorization: Bearer mVHUgDhBl29Ou30zSsTSMBoMGbBs
-  
-  {
-    "account_id": "4d35ca2e-ccff-4397-8c34-2a9d7dbe1e74",
-    "project_id": "5ad6573d-ff9e-4329-ae3e-b921413112e7",
-    "company_id": "4c7d27f3-517a-46d2-93b1-fe19f2f63fd9",
-    "service_type": "doc_manager",
-  }
-
+curl -H "Authorization: Bearer KmE9JOw2PrRpqEhFsrFWbyktnnQA" https://developer-dev.api.autodesk.com:443/ea-api/v1/accounts/4d35ca2e-ccff-4397-8c34-2a9d7dbe1e74/projects/5ad6573d-ff9e-4329-ae3e-b921413112e7/companies/4c7d27f3-517a-46d2-93b1-fe19f2f63fd9?service_type=doc_manager
 
 Response 
 ==========
