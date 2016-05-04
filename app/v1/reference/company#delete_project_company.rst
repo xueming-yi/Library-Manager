@@ -1,5 +1,5 @@
 #################################
-DELETE Companies#delete_project_company
+DELETE delete_project_company
 #################################
 
 Remove the partner company from the project
@@ -30,41 +30,44 @@ Authorization      string    Yes       OAuth 2 authorization header
 Content-Type       string    Yes       Must be "application/json"
 ================  =========  ========= ===========================================
 
-Input Parameters
-=================
-=====================  =========  ========= ===========================================
-Name                   Type       Required  Description
-=====================  =========  ========= ===========================================
-account_id             string     YES       HQ account id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49;.
-project_id             string     YES       HQ account id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49;.
-id                     string     YES       HQ company id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49;.
-service_type           string     YES       single type allowed. field, glue or plan, etc..
-
-
 Body Structure
 ================
 
 .. code-block:: json
     
-    {
-        "title": "company",
-        "type": "object",
-        "properties": {
-            "account_id": {
-                "type": "string",
-            },
-            "project_id": {
-                "type": "string",
-            },
-            "id": {
-                "type": "string",
-            },
-            "service_type": {
-                "type": "string",
-            },
-        }
-    }
-    
+  {
+    "title": "company",
+    "type": "object",
+    "properties": {
+      "account_id": {
+        "type": "uuid",
+        "description": "HQ account id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49;",
+      },
+      "project_id": {
+        "type": "uuid",
+        "description": "HQ project id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49;",
+      },
+      "id": {
+        "type": "uuid",
+        "description": "HQ company id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49;",
+      },
+      "service_type": {
+        "type": "string",
+        "description": "single type allowed. field, glue or plan, etc..",
+      },
+    },
+    "required": ["account_id", "project_id", "id", "service_type"]
+  }
+
+=====================  ===========  ========= ===========================================
+Attribute              value Type   Required  Description
+=====================  ===========  ========= ===========================================
+account_id             string       YES       HQ account id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49;.
+project_id             string       YES       HQ project id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49;.
+id                     string       YES       HQ company id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49;.
+service_type           string       YES       single type allowed. field, glue or plan, etc..
+=====================  ===========  ========= ===========================================
+
 ********
 Response
 ********
@@ -96,16 +99,12 @@ Examples
 URL 
 =====
 
-https://developer-dev.api.autodesk.com:443/ea-api/v1/accounts/4d35ca2e-ccff-4397-8c34-2a9d7dbe1e74/projects/5ad6573d-ff9e-4329-ae3e-b921413112e7/companies/f48fcbe8-822d-4ae1-91cb-fb132c5db014?service_type=doc_manager
+https://developer-dev.api.autodesk.com:443/ea-api-dev/v1/accounts/b18a6658-5a29-458d-b344-266298080a34/projects/4ed25f29-113e-4187-968e-37117138c29d/companies/1fcedb96-0a5c-4343-acc0-1aa3125bc2d1?service_type=field
 
 Request
 ========= 
 
-.. code-block:: json
-
-  DELETE /ea-api/v1/accounts/4d35ca2e-ccff-4397-8c34-2a9d7dbe1e74/projects/5ad6573d-ff9e-4329-ae3e-b921413112e7/companies/f48fcbe8-822d-4ae1-91cb-fb132c5db014?service_type=doc_manager HTTP/1.1
-  Content-Type: application/json
-  Authorization: Bearer KmE9JOw2PrRpqEhFsrFWbyktnnQA
+curl -H "Authorization: Bearer KmE9JOw2PrRpqEhFsrFWbyktnnQA" -X DELETE https://developer-dev.api.autodesk.com:443/ea-api-dev/v1/accounts/b18a6658-5a29-458d-b344-266298080a34/projects/4ed25f29-113e-4187-968e-37117138c29d/companies/1fcedb96-0a5c-4343-acc0-1aa3125bc2d1?service_type=field
   
 Response 
 ==========
