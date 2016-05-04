@@ -32,30 +32,30 @@ Content-Type       string    Yes       Must be "application/json"
 .. sourcecode:: json
   
 	{
-		"$schema": "http://json-schema.org/draft-04/schema#",
+    "$schema": "http://json-schema.org/draft-04/schema#",
     "title": "company",
     "type": "object",
     "properties": {
-    	"account_id": {
-    		"type": "uuid",
-    		"description": "HQ account id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49",
-    	},
-    	"limit": {
-    		"type": "integer",
-    		"description": "Set response array's size. Default size: 10. Default sort order is updated_at DESC.",
-    	},
-    	"offset": {
-    		"type": "integer",
-    		"description": "Set offset of response array. Default value: 0. Default sort order is updated_at DESC.",
-    	},
-    	"sort": {
-    		"type": "string",
-    		"description": "Sort result by fields. Separate multiple fields with comma, the sort order is ASC and use minus sign '-' to reverse the order as DESC. Invalid fields and whitespace will be ignored.",
-    	},
-    	"field": {
-    		"type": "string",
-    		"description": "Filter result with expected fields, and id will be always returned. Separate multiple fields with comma. Invalid fields will be ignored.",
-    	},
+      "account_id": {
+        "type": "uuid",
+        "description": "HQ account id. UUID. e.g. 84e49c32-8ced-4cda-9586-30e7668b6b49",
+      },
+      "limit": {
+        "type": "integer",
+        "description": "Set response array's size. Default size: 10. Default sort order is updated_at DESC.",
+      },
+      "offset": {
+        "type": "integer",
+        "description": "Set offset of response array. Default value: 0. Default sort order is updated_at DESC.",
+      },
+      "sort": {
+        "type": "string",
+        "description": "Sort result by fields. Separate multiple fields with comma, the sort order is ASC and use minus sign '-' to reverse the order as DESC. Invalid fields and whitespace will be ignored.",
+      },
+      "field": {
+        "type": "string",
+        "description": "Filter result with expected fields, and id will be always returned. Separate multiple fields with comma. Invalid fields will be ignored.",
+      },
     },
     "required": ["account_id"]
   }
