@@ -30,7 +30,7 @@ Content-Type       string    Yes       Must be "application/json"
 * Body Structure
 
 .. sourcecode:: json
-  
+	
 	{
     "$schema": "http://json-schema.org/draft-04/schema#",
     "title": "company",
